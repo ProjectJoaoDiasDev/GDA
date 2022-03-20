@@ -1,5 +1,0 @@
-E:\ProjetosGithub\GDA\GDA.Di\obj\Debug\net6.0\GDA.Di.csproj.AssemblyReference.cache
-E:\ProjetosGithub\GDA\GDA.Di\obj\Debug\net6.0\GDA.Di.GeneratedMSBuildEditorConfig.editorconfig
-E:\ProjetosGithub\GDA\GDA.Di\obj\Debug\net6.0\GDA.Di.AssemblyInfoInputs.cache
-E:\ProjetosGithub\GDA\GDA.Di\obj\Debug\net6.0\GDA.Di.AssemblyInfo.cs
-E:\ProjetosGithub\GDA\GDA.Di\obj\Debug\net6.0\GDA.Di.csproj.CoreCompileInputs.cache
