@@ -49,5 +49,10 @@ namespace GDA.Web.Controllers
 
             return View(ret);
         }
+
+        public async Task<IActionResult> LoginView(LoginViewModel loginVm)
+        {
+            return Ok(View(loginVm));
+        }
     }
 }
