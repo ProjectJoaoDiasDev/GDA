@@ -1,6 +1,4 @@
-﻿using GDA.Dominio.Domain;
-
-namespace GDA.Dominio.ViewModel
+﻿namespace GDA.Dominio.ViewModel
 {
     /// <summary>
     /// The student view model.
@@ -59,6 +57,6 @@ namespace GDA.Dominio.ViewModel
         /// <summary>
         /// Gets or sets the address.
         /// </summary>
-        public Address Address { get; set; }
+        public AddressViewModel Address { get; set; }
     }
 }

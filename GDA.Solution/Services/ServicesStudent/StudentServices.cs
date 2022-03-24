@@ -141,14 +141,19 @@ namespace GDA.Solution.Services.ServicesStudent
             };
         }
 
-        //public StudentViewModel? StudentToViewModel(Student student)
-        //{
-        //    if (student == null) return null;
+        /// <summary>
+        /// Students the to view model.
+        /// </summary>
+        /// <param name="student">The student.</param>
+        /// <returns>A StudentViewModel? .</returns>
+        public StudentViewModel? StudentToViewModel(Student student)
+        {
+            if (student == null) return null;
 
-        //    var std = _mapper.Map<StudentViewModel>(student);
-        //    std.Address = _mapper.Map<AddressViewModel>(std.Address);
-        //    return std;
-        //}
+            var std = _mapper.Map<StudentViewModel>(student);
+            std.Address = _mapper.Map<AddressViewModel>(std.Address);
+            return std;
+        }
 
     }
 }

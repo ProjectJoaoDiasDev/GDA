@@ -15,6 +15,8 @@ x64/
 [Oo]bj/
 [Vv]s/
 .vs/
+node_modules
+wwwroot
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

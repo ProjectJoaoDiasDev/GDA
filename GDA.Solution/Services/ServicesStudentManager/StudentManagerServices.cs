@@ -101,5 +101,19 @@ namespace GDA.Solution.Services.ServicesStudentManager
                 Name = data.Name
             };
         }
+
+        /// <summary>
+        /// Empresas the to view model.
+        /// </summary>
+        /// <param name="studentManager">The studentManager.</param>
+        /// <returns>A StudentManagerViewModel? .</returns>
+        public StudentManagerViewModel? StudentManagerToStudentManagerViewModel(StudentManager studentManager)
+        {
+            if (studentManager == null) return null;
+            var stdManager = _mapper.Map<StudentManagerViewModel>(studentManager);
+            stdManager.Email = studentManager.Email;
+            stdManager.Name = studentManager.Name;
+            return stdManager;
+        }
     }
 }
