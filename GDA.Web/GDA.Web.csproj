@@ -4,11 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\favicon.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
@@ -27,7 +24,7 @@
     <Folder Include="Js\Student\" />
     <Folder Include="Resources\" />
     <Folder Include="Views\StudentManager\" />
-    <Folder Include="Views\Student\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,28 @@
 ﻿html,
 body {
-    margin: 0;
     height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: green;
+    background-color: #264653ff;
+}
+
+nav {
+    background-color: #264653ff;
+}
+
+a, a:hover {
+    color: #e76f51ff;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #e9c46aff;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #e76f51ff;
+    font-size: 1.5rem;
 }

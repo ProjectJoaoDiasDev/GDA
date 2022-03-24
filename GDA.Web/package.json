@@ -1,22 +1,5 @@
 {
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "rimraf": "^2.6.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-minify-html": "^1.0.6",
-    "gulp-ext-replace": "^0.3.0",
-    "browser-sync": "^2.27.9",
-    "gulp-sass": "^5.1.0",
-    "node-sass": "^7.0.1",
-    "sass-loader": "^12.6.0"
-  },
-  "main": "index.js",
-  "name": "gda",
-  "version": "1.0.0",
   "author": "João Dias",
-  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@popperjs/core": "^2.11.4",
@@ -30,5 +13,24 @@
     "moment": "^2.29.1",
     "toastr": "^2.1.4",
     "vue": "^3.2.31"
-  }
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "rimraf": "^2.6.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-ext-replace": "^0.3.0",
+    "browser-sync": "^2.27.9",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.6.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "gda",
+  "type": "module",
+  "version": "1.0.0"
 }

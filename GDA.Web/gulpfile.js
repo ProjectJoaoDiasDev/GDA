@@ -1,10 +1,10 @@
-var gulp = require("gulp");
-var concat = require("gulp-concat");
-var cssmin = require("gulp-cssmin");
-var imagemin = require('gulp-imagemin');
-var browserSync = require("browser-sync").create();
-var watch = require('gulp-watch');
+import gulp from 'gulp';
+import concat from 'gulp-concat';
+import cssmin from 'gulp-cssmin';
+import imagemin from 'gulp-imagemin';
+import browserSync from 'browser-sync';
 
+browserSync.create();
 
 gulp.task('browser-sync', function () {
     browserSync.init({
@@ -46,10 +46,10 @@ gulp.task("js", function () {
 
 gulp.task("css", function () {
     return gulp.src([
-        './styles/**/*.css',
         './node_modules/@fortawesome/fontawesome-free/css/all.css',
         './node_modules/bootstrap/dist/css/bootstrap.css',
-        './node_modules/toastr/build/toastr.min.css'
+        './node_modules/toastr/build/toastr.min.css',
+        './Styles/**/*.css'
     ])
         .pipe(concat('site.css'))
         .pipe(cssmin())
