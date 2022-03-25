@@ -1,4 +1,5 @@
 ﻿using GDA.Data.Contexts;
+using GDA.Domain.Domain;
 using GDA.Domain.Entities;
 using GDA.Domain.Interfaces.Account;
 using Microsoft.AspNetCore.Identity;
@@ -44,9 +45,9 @@ namespace GDA.Data.Identity
         /// <param name="password">The password.</param>
         /// <param name="roles">The roles.</param>
         /// <returns>A Task.</returns>
-        public async Task<bool> CreateAsync(string nome, string email, string password, string roles)
+        public async Task<bool> CreateAsync(string nome, string usuario, string email, string password, string roles, StudentManager studentManager)
         {
-            var user = new ApplicationUser { UserName = nome, Email = email, NormalizedEmail = email, NormalizedUserName = nome };
+            var user = new ApplicationUser { UserName = nome, Email = email, NormalizedEmail = email, NormalizedUserName = nome, StudentManager = studentManager };
             var result = await _userManager.CreateAsync(user, password);
 
             if (result.Succeeded)
@@ -160,7 +161,7 @@ namespace GDA.Data.Identity
         /// </summary>
         /// <param name="userName">The user name.</param>
         /// <returns>An IUser? .</returns>
-        public IUser GetUserName(string userName)
+        public IUser? GetUserName(string userName)
         {
             if (!_dbContext.Users.Any()) return null;
             return _dbContext.Users.FirstOrDefault(us => us.UserName.Equals(userName));

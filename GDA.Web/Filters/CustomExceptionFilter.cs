@@ -1,4 +1,4 @@
-﻿using GDA.Dominio;
+﻿using GDA.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 

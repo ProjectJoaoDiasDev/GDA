@@ -1,5 +1,5 @@
-﻿using GDA.Dominio.Interfaces.Account;
-using GDA.Dominio.ViewModel;
+﻿using GDA.Domain.Interfaces.Account;
+using GDA.Domain.ViewModel;
 using GDA.Solution.Services.ServicesStudentManager;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

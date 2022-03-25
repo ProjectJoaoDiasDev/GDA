@@ -26,3 +26,11 @@ h1, h2, h3, h4, h5 {
     color: #e76f51ff;
     font-size: 1.5rem;
 }
+
+textarea {
+    resize: none;
+}
+
+label {
+    color: #f4a261ff;
+}

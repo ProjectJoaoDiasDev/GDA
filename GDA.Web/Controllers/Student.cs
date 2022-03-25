@@ -1,9 +1,11 @@
 ﻿using GDA.Domain.ViewModel;
 using GDA.Solution.Services.ServicesStudent;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GDA.Web.Controllers
 {
+    [Authorize(Roles = "Student,StudentManager")]
     /// <summary>
     /// The student.
     /// </summary>

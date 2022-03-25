@@ -1,4 +1,6 @@
-﻿namespace GDA.Domain.Interfaces.Account
+﻿using GDA.Domain.Domain;
+
+namespace GDA.Domain.Interfaces.Account
 {
     /// <summary>
     /// The manager.
@@ -13,7 +15,7 @@
         /// <param name="password">The password.</param>
         /// <param name="roles">The roles.</param>
         /// <returns>A Task.</returns>
-        public Task<bool> CreateAsync(string nome, string email, string password, string roles);
+        public Task<bool> CreateAsync(string nomecompleto, string usuario, string email, string password, string roles, StudentManager studentManager);
         /// <summary>
         /// Updates the async.
         /// </summary>

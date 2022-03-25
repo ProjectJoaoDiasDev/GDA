@@ -1,0 +1,26 @@
+﻿@model GDA.Domain.ViewModel.StudentManagerViewModel
+@{
+    ViewData["Title"] = "Cadastrar Usuario";
+}
+
+<form asp-controller="StudentManager" asp-action="New" method="post" asp-route-returnUrl="/StudentManager">
+    <input hidden type="text" asp-for="Id" class="form-control" id="inputId" aria-describedby="idHelp">
+    <div class="row m-3">
+        <div class="col">
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Nome</label>
+                <input type="text" asp-for="Name" class="form-control" id="inputName" aria-describedby="NameHelp">
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" asp-for="Email" class="form-control" id="inputEmail" aria-describedby="EmailHelp">
+            </div>
+        </div>
+        <div class="row">
+        <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </div>
+</form>
+

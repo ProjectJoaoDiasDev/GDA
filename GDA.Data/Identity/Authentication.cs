@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using GDA.Domain.Interfaces.Account;
+using Microsoft.AspNetCore.Identity;
 
 namespace GDA.Data.Identity
 {
     /// <summary>
     /// The authentication.
     /// </summary>
-    public class Authentication
+    public class Authentication : IAuthentication
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
 

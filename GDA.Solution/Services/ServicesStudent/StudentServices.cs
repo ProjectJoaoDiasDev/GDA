@@ -50,7 +50,7 @@ namespace GDA.Solution.Services.ServicesStudent
 
             if (data.Id == 0)
             {
-                var student = StudentViewtoStudent(data, _user.StudentManager);
+                var student = StudentViewtoStudent(data, _user.StudentManager.Id);
                 _repositoryStudent.Save(student);
             }
             else
@@ -116,28 +116,40 @@ namespace GDA.Solution.Services.ServicesStudent
         /// <summary>
         /// Students the viewto student.
         /// </summary>
-        /// <param name="dadosCliente">The dados cliente.</param>
+        /// <param name="dataStudent">The dados cliente.</param>
         /// <param name="studentManager">The student manager.</param>
         /// <returns>A Student.</returns>
-        private static Student StudentViewtoStudent(StudentViewModel dadosCliente, StudentManager studentManager)
+        private static Student StudentViewtoStudent(StudentViewModel dataStudent, int studentManager)
         {
             return new Student()
             {
-                CPF = dadosCliente.CPF,
-                Name = dadosCliente.Name,
+                Id = dataStudent.Id,
+                Active = dataStudent.Active,
+                Name = dataStudent.Name,
+                CPF = dataStudent.CPF,
+                BirthDate = dataStudent.BirthDate,
+                Comments = dataStudent.Comments,
+                ContactNumberMain = dataStudent.ContactNumberMain,
+                ContactNumberSecondary = dataStudent.ContactNumberSecondary,
+                Responsible = dataStudent.Responsible,
+                SchoolClass = dataStudent.SchoolClass,
+                StudentCode = dataStudent.StudentCode,
                 Address = new Address()
                 {
-                    District = dadosCliente.Address.District,
-                    Complement = dadosCliente.Address.Complement,
-                    CEP = dadosCliente.Address.CEP,
-                    City = dadosCliente.Address.City,
-                    PublicPlace = dadosCliente.Address.PublicPlace,
-                    Observation = dadosCliente.Address.Observation,
-                    UF = dadosCliente.Address.UF
+                    District = dataStudent.Address.District,
+                    Complement = dataStudent.Address.Complement,
+                    CEP = dataStudent.Address.CEP,
+                    City = dataStudent.Address.City,
+                    PublicPlace = dataStudent.Address.PublicPlace,
+                    Observation = dataStudent.Address.Observation,
+                    UF = dataStudent.Address.UF
                 },
-                RG = dadosCliente.RG,
-                StudentManager = studentManager,
-                Email = dadosCliente.Email
+                RG = dataStudent.RG,
+                StudentManager = new StudentManager()
+                {
+                    Id = studentManager,
+                },
+                Email = dataStudent.Email
             };
         }
 

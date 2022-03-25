@@ -71,16 +71,16 @@ namespace GDA.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
+            if (string.IsNullOrEmpty(model?.Login)) return View();
 
-            var sessionUser = _studentManagerServices.GetSessionUser();
-            var studentManager = _studentManagerServices.GetById(sessionUser.Id);
+            var studentManager = _studentManagerServices.GetByName(model.Login);
 
             if (studentManager != null)
             {
-                var user = _imanager.GetUserName(studentManager.Email);
+                var user = _imanager.GetUserName(studentManager.Name);
                 if (user == null)
                 {
-                    await _imanager.CreateAsync(studentManager.Name, studentManager.Email, "mudar", "StudentManager");
+                    await _imanager.CreateAsync(studentManager.Name, studentManager.Name, studentManager.Email, "mudar", "StudentManager", studentManager);
                 }
             }
 

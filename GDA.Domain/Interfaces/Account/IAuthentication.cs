@@ -18,6 +18,6 @@
         /// Logouts the.
         /// </summary>
         /// <returns>A Task.</returns>
-        Task<bool> Logout();
+        Task Logout();
     }
 }

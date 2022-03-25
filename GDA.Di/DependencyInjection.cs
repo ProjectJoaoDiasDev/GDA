@@ -57,7 +57,7 @@ namespace GDA.Di
                 options.SlidingExpiration = true;
             });
 
-            services.AddTransient(typeof(Authentication), typeof(Authentication));
+            services.AddTransient(typeof(IAuthentication), typeof(Authentication));
             services.AddTransient(typeof(IManager), typeof(Manager));
             services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
 

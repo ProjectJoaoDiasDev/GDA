@@ -11,8 +11,8 @@ namespace GDA.Domain.ViewModel
         /// Gets or sets the login.
         /// </summary>
         [Required]
-        [EmailAddress]
-        [Display(Name = "Endereço de Email")]
+        //[EmailAddress]
+        [Display(Name = "Email")]
         public string Login { get; set; }
 
         /// <summary>

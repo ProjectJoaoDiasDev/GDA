@@ -30,10 +30,16 @@ namespace GDA.Data.Repositorys
         /// </summary>
         /// <param name="email">The email.</param>
         /// <returns>A StudentManager? .</returns>
-        public StudentManager? GetByEmail(string email)
+        public StudentManager GetByEmail(string email)
         {
             return _context.StudentManager.FirstOrDefault(x => x.Email == email);
         }
+
+        public StudentManager GetByName(string name)
+        {
+            return _context.StudentManager.FirstOrDefault(x => x.Name == name);
+        }
+
 
         /// <summary>
         /// Gets the by id.

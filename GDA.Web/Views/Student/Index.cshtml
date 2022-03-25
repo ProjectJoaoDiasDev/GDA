@@ -1,5 +1,48 @@
 ﻿@model List<GDA.Domain.ViewModel.StudentViewModel>
 @{
     ViewData["Title"] = "Estudantes";
-    Layout = "_Layout";
 }
+
+<div class="row">
+    <div class="card bg-light">
+        <div class="card-header">
+            <a type="button" href="/Student/New" class="btn btn-light">Novo</a>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">StudentCode</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Ean</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Qtd.</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.StudentCode</td>
+                                <td>@item.Name</td>
+                                <td>@item.SchoolClass</td>
+                                <td>@item.ContactNumberMain</td>
+                                <td>@item.Responsible</td>
+                                <td>@item.BirthDate</td>
+                                <td>@item.CPF</td>
+                                <td>
+                                    <div class="m-1">
+                                        <a class="btn btn-outline-secondary" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent" href="/Student/Edit?id=@(item.Id)"><i class="fas fa-edit"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

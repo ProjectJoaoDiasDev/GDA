@@ -69,8 +69,14 @@ namespace GDA.Solution.Services.ServicesStudentManager
 
         public StudentManager GetSessionUser()
         {
-            return _user.StudentManager;
+            return _user?.StudentManager;
         }
+
+        public StudentManager GetByName(string name)
+        {
+            return _repositoryStudentManager.GetByName(name);
+        }
+
 
         public List<StudentManager> GetAll()
         {

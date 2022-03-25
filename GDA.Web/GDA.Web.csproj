@@ -23,7 +23,6 @@
     <Folder Include="Js\StudentManager\" />
     <Folder Include="Js\Student\" />
     <Folder Include="Resources\" />
-    <Folder Include="Views\StudentManager\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
