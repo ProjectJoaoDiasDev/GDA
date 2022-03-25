@@ -1,7 +1,7 @@
-﻿using GDA.Dados.Identity;
-using GDA.Dominio;
-using GDA.Dominio.Interfaces.Account;
-using GDA.Dominio.ViewModel;
+﻿using GDA.Data.Identity;
+using GDA.Domain;
+using GDA.Domain.Interfaces.Account;
+using GDA.Domain.ViewModel;
 using GDA.Solution.Services.ServicesStudentManager;
 using GDA.Solution.Utils;
 using Microsoft.AspNetCore.Authorization;

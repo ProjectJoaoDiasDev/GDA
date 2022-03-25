@@ -1,4 +1,4 @@
-﻿using GDA.Dominio.ViewModel;
+﻿using GDA.Domain.ViewModel;
 using GDA.Solution.Services.ServicesStudent;
 using Microsoft.AspNetCore.Mvc;
 
@@ -71,6 +71,13 @@ namespace GDA.Web.Controllers
         {
             var student = _studentServices?.GetAllByIdStudentManager()?.Select(std => _studentServices.StudentToViewModel(std))?.ToList();
             return Json(student);
+        }
+
+        public IActionResult Search()
+        {
+            var student = _studentServices.GetAll().ToList();
+            ViewBag.datasource = student;
+            return View();
         }
     }
 }

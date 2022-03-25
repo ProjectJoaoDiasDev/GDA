@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GDA.Dados\GDA.Dados.csproj" />
-    <ProjectReference Include="..\GDA.Dominio\GDA.Dominio.csproj" />
+    <ProjectReference Include="..\GDA.Data\GDA.Data.csproj" />
+    <ProjectReference Include="..\GDA.Domain\GDA.Domain.csproj" />
   </ItemGroup>
 
 </Project>

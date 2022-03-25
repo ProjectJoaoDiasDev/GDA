@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using GDA.Dados.Repositorys;
-using GDA.Dominio;
-using GDA.Dominio.Domain;
-using GDA.Dominio.Interfaces.Account;
-using GDA.Dominio.ViewModel;
+using GDA.Data.Repositorys;
+using GDA.Domain;
+using GDA.Domain.Domain;
+using GDA.Domain.Interfaces.Account;
+using GDA.Domain.ViewModel;
 using Microsoft.AspNetCore.Http;
 
 namespace GDA.Solution.Services.ServicesStudentManager

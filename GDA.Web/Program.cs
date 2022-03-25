@@ -1,6 +1,6 @@
-using GDA.Dados.Contexts;
+using GDA.Data.Contexts;
 using GDA.Di;
-using GDA.Dominio.Interfaces;
+using GDA.Domain.Interfaces;
 using GDA.Web.Filters;
 using GDA.Web.Models;
 using Microsoft.EntityFrameworkCore;

@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GDA.Di\GDA.Di.csproj" />
-    <ProjectReference Include="..\GDA.Dominio\GDA.Dominio.csproj" />
+    <ProjectReference Include="..\GDA.Domain\GDA.Domain.csproj" />
     <ProjectReference Include="..\GDA.Solution\GDA.Solution.csproj" />
   </ItemGroup>
 
@@ -25,6 +25,15 @@
     <Folder Include="Resources\" />
     <Folder Include="Views\StudentManager\" />
     <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grid.Mvc" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
   </ItemGroup>
 
 </Project>

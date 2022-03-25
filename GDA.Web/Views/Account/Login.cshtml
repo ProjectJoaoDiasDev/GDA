@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+@model GDA.Domain.ViewModel.LoginViewModel;
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login GDA</title>
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+
+    <script src="/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div>
+            <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-sm-6 col-lg-3">
+                    <form asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@Context.Request.Query["ReturnUrl"]">
+                        <div style="padding: 30px 5px;" class="card bg-light">
+                            <div class="card-title text-center mt-1">
+                                <h5>Login RCA Locação</h5>
+                            </div>
+                            <div class="card-body mt-0">
+                                <input hidden asp-for="ReturnUrl" type="text" value="Request.RawUrl" />
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                    <input asp-for="Login" id="imputLogin" class="form-control" type="text" placeholder="Usuário" required autofocus />
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                    <input asp-for="Password" class="form-control" type="password" placeholder="Senha" required />
+                                </div>
+
+                                <a class="nav-link text-center" href="/account/redefinir-senha">Esqueci minha senha</a>
+
+                                <div class="form-check mb-3">
+                                    <input asp-for="Remember" class="form-check-input" id="checkLembrar" type="checkbox" />
+                                    <label for="checkLembrar" class="form-check-label">Lembrar-me</label>
+                                </div>
+
+                                <button style="transition: all 0.5s;width: 100%;" type="submit" class="btn btn-outline-dark">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/site.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
+
+

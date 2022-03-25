@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login GDA</title>
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/vue.global.js"></script>
+
+</head>
+<body>
+    <section id="viewRedefinir-senha" style="height: 100vh;">
+        <div class="container" style="height: 100%;">
+            <div class="row d-flex justify-content-center align-items-center" style="height: 100%">
+                <div class="col-lg-6 text-dark">
+                    <div v-if="senhaAlterada" class="text-center">
+                        <h5 class="text-center text-success mb-3">Senha alterada com sucesso</h5>
+                        <a v-bind:href="'/account/login?returnUrl='+urlBase" style="width: 300px;" class="my-2 btnProseguir d-block m-auto">Fazer login</a>
+                        <a class="link my-3" v-bind:href="urlBase + '/account/reset/email'" style="color: rgb(39, 96, 172); cursor: pointer;"><i class="bi bi-arrow-left"></i> Voltar</a>
+                    </div>
+                    <div class="card p-3" v-else>
+                        <div class="card-header" style="background: #fff;">
+                            <div class="card-title">
+                                <h5 class="text-center">
+                                    Criar senha
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <div class="d-flex flex-row">
+                                    <input id="novaSenha" v-model="novaSenha" type="password" style="font-size: 14px;" class="form-control p-2 mb-2" placeholder="Nova senha" />
+                                    <p style="font-size: 14px" id="novaSenhaErro" class="text-danger d-none my-1"></p>
+                                    <button class="ms-1" style="border: none; color: #000; padding: 10px; background: #fff;" v-on:click="show.senha = !show.senha">
+                                        <i v-if="show.senha" class="fa fa-eye-slash text-muted"></i>
+                                        <i v-else class="fa fa-eye text-muted"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <input id="confirmSenha" v-model="confirmSenha" type="password" style="font-size: 14px;" class="form-control p-2" placeholder="Confirme sua senha" />
+                                    <p style="font-size: 14px" id="confirmSenhaErro" class="text-danger d-none my-1"></p>
+                                    <button class="ms-1" style="border: none; color: #000; padding: 10px; background: #fff;" v-on:click="show.confirmSenha = !show.confirmSenha">
+                                        <i v-if="show.confirmSenha" class="fa fa-eye-slash text-muted"></i>
+                                        <i v-else class="fa fa-eye text-muted"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <p style="font-size: 14px" id="erro" class="text-danger d-none mt-2"></p>
+                            <button v-on:click="postRedefinirSenha()" class="btn btn-primary mt-3">Alterar senha</button>
+                        </div>
+                        <a class="link mt-3" href="/" style="color: rgb(39, 96, 172); cursor: pointer;"><i class="bi bi-arrow-left"></i> Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script src="~/js/VueJs/Account/ResetPassword.js"></script>
