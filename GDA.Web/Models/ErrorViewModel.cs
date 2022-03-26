@@ -1,4 +1,4 @@
-namespace GDA.Models
+namespace GDA.Web.Models
 {
     /// <summary>
     /// The error view model.

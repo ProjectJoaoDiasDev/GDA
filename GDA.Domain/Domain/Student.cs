@@ -8,10 +8,6 @@ namespace GDA.Domain.Domain
     public class Student : AbstractEntity
     {
         /// <summary>
-        /// Gets or sets the student code.
-        /// </summary>
-        public long StudentCode { get; set; }
-        /// <summary>
         /// Gets or sets the name.
         /// </summary>
         [Column(TypeName = "VARCHAR(250)")]

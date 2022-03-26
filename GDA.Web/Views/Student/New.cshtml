@@ -7,7 +7,6 @@
 <form asp-controller="Student" asp-action="New" method="post" asp-route-returnUrl="/Student">
     <div class="row m-3">
         <input hidden type="text" asp-for="Id" class="form-control" id="inputId">
-        <input hidden type="text" asp-for="StudentCode" class="form-control" id="inputStudentCode">
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputName" class="form-label">Nome</label>
@@ -68,37 +67,37 @@
                 <input type="text" asp-for="Address.CEP" class="form-control" id="inputAddressCEP" aria-describedby="AddressCEPHelp">
             </div>
         </div>
-         <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressDistrict" class="form-label">Bairro</label>
                 <input type="text" asp-for="Address.District" class="form-control" id="inputAddressDistrict" aria-describedby="AddressDistrictHelp">
             </div>
         </div>
-         <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressCity" class="form-label">Cidade</label>
                 <input type="text" asp-for="Address.City" class="form-control" id="inputAddressCity" aria-describedby="AddressCityHelp">
             </div>
         </div>
-         <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressUF" class="form-label">UF</label>
                 <input type="text" asp-for="Address.UF" class="form-control" id="inputAddressUF" aria-describedby="AddressUFHelp">
             </div>
         </div>
-         <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressComplement" class="form-label">Complemento</label>
                 <input type="text" asp-for="Address.Complement" class="form-control" id="inputAddressComplement" aria-describedby="AddressComplementHelp">
             </div>
         </div>
-           <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressPublicPlace" class="form-label">Logradouro</label>
                 <input type="text" asp-for="Address.PublicPlace" class="form-control" id="inputAddressPublicPlace" aria-describedby="AddressPublicPlaceHelp">
             </div>
         </div>
-           <div class="col-md-6">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressObservation" class="form-label">Observação Endereço</label>
                 <input type="text" asp-for="Address.Observation" class="form-control" id="inputAddressObservation" aria-describedby="AddressObservationHelp">
@@ -107,7 +106,7 @@
         <div class="col-12">
             <div class="mb-3">
                 <label for="inputComments" class="form-label">Observações Estudante</label>
-                <textarea type="text" rows="10"wrap="hard" asp-for="Comments" class="form-control" id="inputComments" aria-describedby="CommentsHelp"></textarea>
+                <textarea type="text" rows="10" wrap="hard" asp-for="Comments" class="form-control" id="inputComments" aria-describedby="CommentsHelp"></textarea>
             </div>
         </div>
     </div>

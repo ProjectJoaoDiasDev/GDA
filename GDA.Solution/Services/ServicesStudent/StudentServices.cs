@@ -48,9 +48,11 @@ namespace GDA.Solution.Services.ServicesStudent
         {
             ValidarDados(data);
 
+            var studentManager = _servicesStudentManager.GetByName(_user.UserName);
+
             if (data.Id == 0)
             {
-                var student = StudentViewtoStudent(data, _user.StudentManager.Id);
+                var student = StudentViewtoStudent(data, studentManager);
                 _repositoryStudent.Save(student);
             }
             else
@@ -79,7 +81,7 @@ namespace GDA.Solution.Services.ServicesStudent
         /// <returns>A list of Students.</returns>
         public List<Student> GetAllByIdStudentManager()
         {
-            return _repositoryStudent.GetAllByIdStudentManager(_user?.StudentManager?.Id ?? 0);
+            return _repositoryStudent.GetAllByIdStudentManager(_user.StudentManager.Id);
         }
         /// <summary>
         /// Gets the all.
@@ -119,12 +121,12 @@ namespace GDA.Solution.Services.ServicesStudent
         /// <param name="dataStudent">The dados cliente.</param>
         /// <param name="studentManager">The student manager.</param>
         /// <returns>A Student.</returns>
-        private static Student StudentViewtoStudent(StudentViewModel dataStudent, int studentManager)
+        private static Student StudentViewtoStudent(StudentViewModel dataStudent, StudentManager studentManager)
         {
             return new Student()
             {
                 Id = dataStudent.Id,
-                Active = dataStudent.Active,
+                Active = true,
                 Name = dataStudent.Name,
                 CPF = dataStudent.CPF,
                 BirthDate = dataStudent.BirthDate,
@@ -133,7 +135,6 @@ namespace GDA.Solution.Services.ServicesStudent
                 ContactNumberSecondary = dataStudent.ContactNumberSecondary,
                 Responsible = dataStudent.Responsible,
                 SchoolClass = dataStudent.SchoolClass,
-                StudentCode = dataStudent.StudentCode,
                 Address = new Address()
                 {
                     District = dataStudent.Address.District,
@@ -142,13 +143,10 @@ namespace GDA.Solution.Services.ServicesStudent
                     City = dataStudent.Address.City,
                     PublicPlace = dataStudent.Address.PublicPlace,
                     Observation = dataStudent.Address.Observation,
-                    UF = dataStudent.Address.UF
+                    UF = dataStudent.Address.UF,
                 },
                 RG = dataStudent.RG,
-                StudentManager = new StudentManager()
-                {
-                    Id = studentManager,
-                },
+                StudentManager = studentManager,
                 Email = dataStudent.Email
             };
         }

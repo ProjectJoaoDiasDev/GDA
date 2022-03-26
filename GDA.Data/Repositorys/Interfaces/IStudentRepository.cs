@@ -18,12 +18,9 @@ namespace GDA.Data.Repositorys
         /// <param name="entity">The entity.</param>
         void Save(Student entity);
         /// <summary>
-        /// Gets the by studentCode.
+        /// Gets the all.
         /// </summary>
-        /// <param name="studentManagerId">The student manager id.</param>
-        /// <param name="studentCode">The studentCode.</param>
-        /// <returns>A Student.</returns>
-        Student GetByStudentCode(int studentManagerId, long studentCode);
+        /// <returns>A         List&lt;Student&gt;? .</returns>
         List<Student>? GetAll();
     }
 }

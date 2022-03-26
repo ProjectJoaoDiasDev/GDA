@@ -17,8 +17,5 @@ namespace GDA.Domain.Domain
         /// </summary>
         [Column(TypeName = "VARCHAR(200)")]
         public string Name { get; set; }
-        /// <summary>
-        /// Gets or sets the cpf.
-        /// </summary>
     }
 }

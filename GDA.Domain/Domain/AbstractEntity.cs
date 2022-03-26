@@ -24,6 +24,6 @@
         /// <summary>
         /// Data de cadastro
         /// </summary>
-        public DateTime RegistrationDate { get; private set; }
+        public DateTime RegistrationDate { get; }
     }
 }

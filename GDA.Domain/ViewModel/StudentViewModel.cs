@@ -9,7 +9,6 @@
         /// Gets or sets the id.
         /// </summary>
         public int Id { get; set; }
-        public long StudentCode { get; set; }
         /// <summary>
         /// Gets or sets the name.
         /// </summary>

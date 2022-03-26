@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GDA.Web.Controllers
 {
-    [Authorize(Roles = "Student,StudentManager")]
     /// <summary>
     /// The student.
     /// </summary>
+    [Authorize(Roles = "Student,StudentManager")]
     public class Student : Controller
     {
         private readonly StudentServices _studentServices;
@@ -28,7 +28,8 @@ namespace GDA.Web.Controllers
         /// <returns>An IActionResult.</returns>
         public IActionResult Index()
         {
-            return View();
+            var student = _studentServices.GetAll()?.Select(std => _studentServices.StudentToViewModel(std))?.ToList();
+            return View(student);
         }
 
         /// <summary>

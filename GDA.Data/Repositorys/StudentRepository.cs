@@ -25,7 +25,7 @@ namespace GDA.Data.Repositorys
         /// </summary>
         /// <param name="studentManagerId">The student manager id.</param>
         /// <returns>A List of Student? .</returns>
-        public List<Student>? GetAllByIdStudentManager(int studentManagerId)
+        public List<Student> GetAllByIdStudentManager(int studentManagerId)
         {
             if (!Context.Student.Any()) return null;
             return Context.Student
@@ -34,26 +34,12 @@ namespace GDA.Data.Repositorys
         }
 
         /// <summary>
-        /// Produtos the any.
+        /// Gets the all.
         /// </summary>
-        /// <param name="studentManagerId">The student manager id.</param>
-        /// <returns>A bool.</returns>
-        public List<Student>? GetAll()
+        /// <returns>A list of Students.</returns>
+        public List<Student> GetAll()
         {
-            return Context.Student?.ToList();
-        }
-
-        /// <summary>
-        /// Gets the by codigo.
-        /// </summary>
-        /// <param name="studentManagerId">The student manager id.</param>
-        /// <param name="studentCode">The student code.</param>
-        /// <returns>A Student.</returns>
-        public Student GetByStudentCode(int studentManagerId, long studentCode)
-        {
-            return Context.Student
-                .Include(e => e.StudentManager)
-                .FirstOrDefault(x => x.StudentManager.Id == studentManagerId && x.StudentCode == studentCode);
+            return Context.Student.ToList();
         }
 
         /// <summary>
@@ -61,9 +47,9 @@ namespace GDA.Data.Repositorys
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns>A Student? .</returns>
-        public Student? GetById(int id)
+        public Student GetById(int id)
         {
-            return Context.Student?.FirstOrDefault(x => x.Id == id);
+            return Context.Student.FirstOrDefault(x => x.Id == id);
         }
 
         /// <summary>
@@ -71,7 +57,7 @@ namespace GDA.Data.Repositorys
         /// </summary>
         /// <param name="ids">The ids.</param>
         /// <returns>A List of Student? .</returns>
-        public List<Student>? GetByIds(int[] ids)
+        public List<Student> GetByIds(int[] ids)
         {
             if (ids.Length == 0) return null;
 

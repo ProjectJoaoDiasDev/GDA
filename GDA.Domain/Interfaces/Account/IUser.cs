@@ -26,6 +26,6 @@ namespace GDA.Domain.Interfaces.Account
         /// <summary>
         /// Gets or sets the student manager.
         /// </summary>
-        public StudentManager? StudentManager { get; set; }
+        public StudentManager StudentManager { get; set; }
     }
 }
