@@ -12,7 +12,7 @@
         {
             if (Id <= 0)
             {
-                RegistrationDate = DateTime.Now;
+                RegistrationDate = DateTime.Now.Date;
             }
         }
 

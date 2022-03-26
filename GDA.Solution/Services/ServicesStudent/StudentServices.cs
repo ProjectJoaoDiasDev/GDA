@@ -58,10 +58,17 @@ namespace GDA.Solution.Services.ServicesStudent
             else
             {
                 var student = _repositoryStudent.GetById(data.Id);
+
                 student.Name = data.Name;
-                student.RG = data.RG;
+                student.SchoolClass = data.SchoolClass;
+                student.ContactNumberMain = data.ContactNumberMain;
+                student.ContactNumberSecondary = data.ContactNumberSecondary;
+                student.Responsible = data.Responsible;
+                student.BirthDate = data.BirthDate;
                 student.Email = data.Email;
                 student.CPF = data.CPF;
+                student.RG = data.RG;
+                student.Comments = data.Comments;
 
                 student.Address.PublicPlace = data.Address.PublicPlace;
                 student.Address.Observation = data.Address.Observation;

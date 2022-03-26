@@ -61,7 +61,6 @@
                 success: function (resp) {
                     thisVue.studentViewModelEdit = resp;
                     thisVue.studentViewModelEdit = resp.active
-
                 }
             })
         },

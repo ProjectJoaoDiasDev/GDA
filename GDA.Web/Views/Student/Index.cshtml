@@ -39,11 +39,18 @@
                                 <td>@item.SchoolClass</td>
                                 <td>@item.ContactNumberMain</td>
                                 <td>@item.Responsible</td>
-                                <td>@item.BirthDate</td>
+                                @if (@item.BirthDate != null)
+                                {
+                                    <td>@item.BirthDate.Value.Date.ToShortDateString()</td>
+                                }
+                                else
+                                {
+                                    <td>Data não preenchida</td>
+                                }
                                 <td>@item.CPF</td>
                                 <td>
                                     <div class="m-1">
-                                        <button class="btn btn-outline-secondary" v-on:click="showModal('modalStudentEdit');" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent"><i class="fas fa-edit"></i></button>
+                                        <a class="btn btn-outline-secondary" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent" href="/Student/Edit?id=@(item.Id)"><i class="fas fa-edit"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -53,8 +60,8 @@
             </table>
         </div>
     </div>
-    <partial name="~/Views/Modals/ModalStudentEdit.cshtml" />
-    <partial name="~/Views/Modals/ModalStudentSearch.cshtml" />
+    @*    <partial name="~/Views/Modals/ModalStudentEdit.cshtml" />
+        <partial name="~/Views/Modals/ModalStudentSearch.cshtml" />*@
 </div>
 
-<script src="~/js/Student/Student.js"></script>
+@*<script src="~/js/Student/Student.js"></script>*@

@@ -32,6 +32,12 @@ namespace GDA.Web.Controllers
             return View(student);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Index(string student)
+        {
+            ViewData["GetStudentDetails"] = student;
+        }
+
         /// <summary>
         /// News the.
         /// </summary>
@@ -46,11 +52,10 @@ namespace GDA.Web.Controllers
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns>An IActionResult.</returns>
-        [HttpPut]
         public IActionResult Edit(int id)
         {
             var student = _studentServices.GetById(id);
-            return View(_studentServices.StudentToViewModel(student));
+            return View("New", _studentServices.StudentToViewModel(student));
         }
 
         /// <summary>
