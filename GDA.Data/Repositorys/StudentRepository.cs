@@ -29,7 +29,7 @@ namespace GDA.Data.Repositorys
         {
             if (!Context.Student.Any()) return null;
             return Context.Student
-                .Include(e => e.StudentManager)
+                .Include(e => e.Address)
                 .Where(x => x.StudentManager.Id == studentManagerId)?.ToList();
         }
 
@@ -39,7 +39,10 @@ namespace GDA.Data.Repositorys
         /// <returns>A list of Students.</returns>
         public List<Student> GetAll()
         {
-            return Context.Student.ToList();
+            return Context.Student
+                .Include(e => e.StudentManager)
+                .Include(e => e.Address)
+                .ToList();
         }
 
         /// <summary>
@@ -49,7 +52,10 @@ namespace GDA.Data.Repositorys
         /// <returns>A Student? .</returns>
         public Student GetById(int id)
         {
-            return Context.Student.FirstOrDefault(x => x.Id == id);
+            return Context.Student
+                .Include(e => e.StudentManager)
+                .Include(e => e.Address)
+                .FirstOrDefault(x => x.Id == id);
         }
 
         /// <summary>

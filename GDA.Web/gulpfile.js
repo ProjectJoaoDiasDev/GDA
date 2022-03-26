@@ -15,7 +15,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch-css', function () {
-    gulp.watch('./Styles/**/*.css', ['css']);
+    gulp.watch('./styles/**/*.css', ['css']);
 })
 
 gulp.task("js", function () {
@@ -49,7 +49,7 @@ gulp.task("css", function () {
         './node_modules/@fortawesome/fontawesome-free/css/all.css',
         './node_modules/bootstrap/dist/css/bootstrap.css',
         './node_modules/toastr/build/toastr.min.css',
-        './Styles/**/*.css'
+        './styles/**/*.css'
     ])
         .pipe(concat('site.css'))
         .pipe(cssmin())
@@ -64,7 +64,7 @@ gulp.task("img", function () {
 
 gulp.task('font', function () {
     return gulp.src([
-        './Fonts/**/*',
+        './fonts/**/*',
         './node_modules/@fortawesome/fontawesome-free/webfonts/*'
     ]).pipe(gulp.dest('wwwroot/webfonts/'));
 });

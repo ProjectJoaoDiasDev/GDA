@@ -164,7 +164,7 @@ namespace GDA.Data.Identity
         public IUser? GetUserName(string userName)
         {
             if (!_dbContext.Users.Any()) return null;
-            return _dbContext.Users.FirstOrDefault(us => us.UserName.Equals(userName));
+            return _dbContext.Users.Include(st => st.StudentManager).FirstOrDefault(us => us.UserName.Equals(userName));
         }
 
         /// <summary>

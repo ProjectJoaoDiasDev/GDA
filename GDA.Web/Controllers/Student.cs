@@ -46,10 +46,11 @@ namespace GDA.Web.Controllers
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns>An IActionResult.</returns>
+        [HttpPut]
         public IActionResult Edit(int id)
         {
             var student = _studentServices.GetById(id);
-            return View("New", _studentServices.StudentToViewModel(student));
+            return View(_studentServices.StudentToViewModel(student));
         }
 
         /// <summary>
@@ -65,6 +66,19 @@ namespace GDA.Web.Controllers
             return Redirect(returnUrl);
         }
 
+        /// <summary>
+        /// Gets the by id.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <returns>An json of studentViewModel.</returns>
+        public IActionResult GetById([FromQuery] int id)
+        {
+            var student = _studentServices.GetById(id);
+            if (student == null) return null;
+
+            var studentViewModel = _studentServices.StudentToViewModel(student);
+            return Json(studentViewModel);
+        }
         /// <summary>
         /// Gets the all.
         /// </summary>

@@ -2,7 +2,21 @@
     color: #e76f51ff;
 }
 
-#btn-new {
-    color: #264653ff;
+#card-student #btn-new {
+    color: antiquewhite;
     background-color: #2a9d8fff;
+    transition: 0.4s;
+}
+
+    #card-student #btn-new:hover {
+        background-color: #e76f51ff;
+    }
+
+#table-student tr {
+    color: antiquewhite;
+}
+
+#close-button {
+    color: antiquewhite;
+    background-color: white;
 }

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\pencil-solid.svg" />
+    <None Remove="images\pencil-solid.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Js\Utils\" />
-    <Folder Include="Js\StudentManager\" />
-    <Folder Include="Js\Student\" />
+    <Folder Include="js\Utils\" />
+    <Folder Include="js\StudentManager\" />
+    <Folder Include="fonts\" />
     <Folder Include="Resources\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>

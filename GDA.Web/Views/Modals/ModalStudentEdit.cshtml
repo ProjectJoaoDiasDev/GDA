@@ -1,0 +1,106 @@
+﻿<div class="modal fade" id="modalStudentEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalStudentEditLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark">
+            <div class="modal-header d-flex justify-content-between">
+                <div class="row">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-user-graduate"></i> {{studentViewModelEdit.name}}
+                        <span class="badge rounded-pill mx-1">
+                            {{active ? 'Estudante Ativo' : 'Estudante Inativo'}}
+                        </span>
+                    </h5>
+                </div>
+                <button type="button" class="btn-close" id="close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="border-start border-5 rounded-start" v-model="studentViewModelEdit">
+                    <div class="row m-1">
+                        <div class="col-12">
+                            <h5 class=" text-capitalize">{{studentViewModelEdit.name}}</h5>
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="form-group col-auto">
+                            <label for="inputId">Id</label>
+                            <input type="text" class="form-control" disabled v-model="studentViewModelEdit.Id" id="inputId">
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputName">Nome</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.Name" id="inputName" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputSchoolClass">Turma</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.SchoolClass" id="inputSchoolClass" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputContactNumberMain">Contato Principal</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.ContactNumberMain" id="inputContactNumberMain" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputResponsible">Responsável</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.Responsible" id="inputResponsible" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputComments">Observações Estudante</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.Comments" id="inputComments" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputContactNumberSecondary">Contato Secundario</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.ContactNumberSecondary" id="inputContactNumberSecondary" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputBirthDate">Data de Nascimento</label>
+                            <input type="date" class="form-control" v-model="studentViewModelEdit.BirthDate" id="inputBirthDate" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" v-model="studentViewModelEdit.Email" id="inputEmail" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputCPF">CPF</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.CPF" id="inputCPF" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputRG">RG</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.RG" id="inputRG" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputCEP">CEP</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.CEP" id="inputCEP" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputDistrict">Bairro</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.District" id="inputDistrict" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputCity">Cidade</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.City" id="inputCity" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputUF">UF</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.UF" id="inputUF" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputComplement">Complemento</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.Complement" id="inputComplement" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputPublicPlace">Logradouro</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.PublicPlace" id="inputPublicPlace" />
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="inputObservation">Observação Endereço</label>
+                            <input type="text" class="form-control" v-model="studentViewModelEdit.address.Observation" id="inputObservation" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="justify-content-md-end">
+                    <button type="button" class="btn btn-danger m-2 btn-md" data-bs-dismiss="modal">Sair</button>
+                    <button type="button" class="btn btn-success m-2 btn-md" data-bs-dismiss="modal" v-on:click="updateStudent(studentViewModelEdit)">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
