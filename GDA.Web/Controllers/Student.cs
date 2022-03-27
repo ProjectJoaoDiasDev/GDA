@@ -32,12 +32,6 @@ namespace GDA.Web.Controllers
             return View(student);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index(string student)
-        {
-            ViewData["GetStudentDetails"] = student;
-        }
-
         /// <summary>
         /// News the.
         /// </summary>

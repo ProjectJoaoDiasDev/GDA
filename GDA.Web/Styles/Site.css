@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    background-color: #264653ff;
+    background-color: #264653ff!important;
 }
 
 nav {
@@ -13,18 +13,18 @@ nav {
 }
 
 a, a:hover {
-    color: #e76f51ff;
+    color: black;
     text-decoration: none;
 }
 
 h1, h2, h3, h4, h5 {
-    color: #e9c46aff;
+    color: #f4a261ff;
     font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #e76f51ff;
-    font-size: 1.5rem;
+    color: antiquewhite!important;
+    font-size: 1.5rem!important;
 }
 
 textarea {
@@ -33,4 +33,5 @@ textarea {
 
 label {
     color: #f4a261ff;
+    font-weight: bold;
 }

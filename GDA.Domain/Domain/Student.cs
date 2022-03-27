@@ -29,7 +29,7 @@ namespace GDA.Domain.Domain
         /// <summary>
         /// Gets or sets the comments.
         /// </summary>
-        [Column(TypeName = "VARCHAR(500)")]
+        [Column(TypeName = "VARCHAR(5000)")]
         public string? Comments { get; set; }
         /// <summary>
         /// Gets or sets the contact number secondary.

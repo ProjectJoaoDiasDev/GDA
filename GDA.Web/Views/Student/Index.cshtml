@@ -4,64 +4,63 @@
     Layout = "_Layout";
 }
 
-<div class="row" id="viewStudent">
-    <div class="card text-white bg-dark" id="card-student">
-        <div class="card-header">
-            <a type="button" href="/Student/New" id="btn-new" class="btn">Cadastrar Estudante</a>
-        </div>
-        <div class="card-body">
-            <table class="table table-dark table-striped" id="table-student">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Turma</th>
-                        <th scope="col">Contato Principal</th>
-                        <th scope="col">Responsável</th>
-                        <th scope="col">Data de Nascimento</th>
-                        <th scope="col">CPF</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model == null)
+<p>
+    <a asp-action="New" type="button" class="btn bg-secondary text-white" id="#btn-new">Cadastrar Estudante</a>
+</p>
+<table id="studentTable" class="display table table-striped table-bordered border-secondary bg-secondary">
+    <thead class="text-white" id="studentTableHead">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Turma</th>
+            <th scope="col">Contato Principal</th>
+            <th scope="col">Responsável</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Editar</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.SchoolClass</td>
+                <td>@item.ContactNumberMain</td>
+                <td>@item.Responsible</td>
+                @if (@item.BirthDate != null)
                     {
-                        <tr>
-                            <td>Sem Estudantes Cadastrados.</td>
-                        </tr>
+                        <td>@item.BirthDate.Value.Date.ToShortDateString()</td>
                     }
                     else
                     {
-                        foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@item.Id</td>
-                                <td>@item.Name</td>
-                                <td>@item.SchoolClass</td>
-                                <td>@item.ContactNumberMain</td>
-                                <td>@item.Responsible</td>
-                                @if (@item.BirthDate != null)
-                                {
-                                    <td>@item.BirthDate.Value.Date.ToShortDateString()</td>
-                                }
-                                else
-                                {
-                                    <td>Data não preenchida</td>
-                                }
-                                <td>@item.CPF</td>
-                                <td>
-                                    <div class="m-1">
-                                        <a class="btn btn-outline-secondary" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent" href="/Student/Edit?id=@(item.Id)"><i class="fas fa-edit"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                        }
+                        <td>Data não preenchida</td>
                     }
-                </tbody>
-            </table>
-        </div>
-    </div>
-    @*    <partial name="~/Views/Modals/ModalStudentEdit.cshtml" />
-        <partial name="~/Views/Modals/ModalStudentSearch.cshtml" />*@
-</div>
+                    <td>
+                        <div class="m-1">
+                            <a class="btn btn-outline-secondary" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent" href="/Student/Edit?id=@(item.Id)"><i class="fas fa-edit"></i></a>
+                        </div>
+                    </td>
+            </tr>
+            }
+        }
+    </tbody>
+</table>
 
-@*<script src="~/js/Student/Student.js"></script>*@
+@section scripts{
+    @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" asp-append-version="true">*@
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" asp-append-version="true">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+    <script>
+    $(document).ready( function () {
+    $('#studentTable').DataTable({
+        });
+    });
+    </script>
+}
