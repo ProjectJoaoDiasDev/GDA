@@ -24,13 +24,13 @@
         {
             @foreach (var item in Model)
             {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>@item.SchoolClass</td>
-                <td>@item.ContactNumberMain</td>
-                <td>@item.Responsible</td>
-                @if (@item.BirthDate != null)
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.SchoolClass</td>
+                    <td>@item.ContactNumberMain</td>
+                    <td>@item.Responsible</td>
+                    @if (@item.BirthDate != null)
                     {
                         <td>@item.BirthDate.Value.Date.ToShortDateString()</td>
                     }
@@ -43,7 +43,7 @@
                             <a class="btn btn-outline-secondary" title="Editar Cadastro Estudante" type="button" id="buttonEditStudent" href="/Student/Edit?id=@(item.Id)"><i class="fas fa-edit"></i></a>
                         </div>
                     </td>
-            </tr>
+                </tr>
             }
         }
     </tbody>
@@ -51,16 +51,16 @@
 
 @section scripts{
     @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" asp-append-version="true">*@
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" asp-append-version="true">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" asp-append-version="true">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" asp-append-version="true">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" asp-append-version="true">
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
-    <script>
+<script>
     $(document).ready( function () {
     $('#studentTable').DataTable({
         });
     });
-    </script>
+</script>
 }
