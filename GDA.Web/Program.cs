@@ -18,7 +18,7 @@ DependencyInjection.Configure(builder.Services, builder.Configuration.GetConnect
 
 builder.Services.AddEndpointsApiExplorer();
 
-builder.WebHost.UseUrls("http://localhost:7771,https://localhost:7772");
+builder.WebHost.UseUrls("http://localhost:7771;https://localhost:7772");
 
 var app = builder.Build();
 

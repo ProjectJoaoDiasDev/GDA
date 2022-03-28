@@ -20,7 +20,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:7771;http://localhost:7772",
+      "applicationUrl": "http://localhost:7771;https://localhost:7772",
       "dotnetRunMessages": true
     }
   }
