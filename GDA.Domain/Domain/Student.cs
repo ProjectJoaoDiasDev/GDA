@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GDA.Domain.Domain
 {
@@ -21,10 +21,11 @@ namespace GDA.Domain.Domain
         /// Gets or sets the contact number main.
         /// </summary>
         [Column(TypeName = "VARCHAR(50)")]
-        public string ContactNumberMain { get; set; }
+        public string? ContactNumberMain { get; set; }
         /// <summary>
         /// Gets or sets the responsible.
         /// </summary>
+        [Column(TypeName = "VARCHAR(100)")]
         public string? Responsible { get; set; }
         /// <summary>
         /// Gets or sets the comments.
