@@ -46,7 +46,7 @@ namespace GDA.Solution.Services.ServicesStudent
         /// <param name="data">The data.</param>
         public void Create(StudentViewModel data)
         {
-            ValidarDados(data);
+            //ValidarDados(data);
 
             var studentManager = _servicesStudentManager.GetByName(_user.UserName);
 

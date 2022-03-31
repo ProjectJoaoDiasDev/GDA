@@ -43,7 +43,7 @@ namespace GDA.Solution.Services.ServicesStudentManager
         /// <param name="data">The data.</param>
         public void Create(StudentManagerViewModel data)
         {
-            ValidarDados(data);
+            //ValidarDados(data);
 
             if (data.Id == 0)
             {
