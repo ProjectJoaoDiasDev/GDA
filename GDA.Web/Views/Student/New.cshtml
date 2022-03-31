@@ -10,31 +10,31 @@
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputName" class="form-label">Nome</label>
-                <input type="text" asp-for="Name" class="form-control" id="inputName" aria-describedby="SchoolClassHelp">
+                <input type="text" asp-for="Name" class="form-control" id="inputName" aria-describedby="SchoolClassHelp" required placeholder="Nome">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputSchoolClass" class="form-label">Turma</label>
-                <input type="text" asp-for="SchoolClass" class="form-control" id="inputSchoolClass" aria-describedby="SchoolClassHelp">
+                <input type="text" asp-for="SchoolClass" class="form-control" id="inputSchoolClass" aria-describedby="SchoolClassHelp" required placeholder="Turma">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputContactNumberMain" class="form-label">Contato</label>
-                <input type="text" asp-for="ContactNumberMain" class="form-control" id="inputContactNumberMain" aria-describedby="ContactNumberMainHelp">
+                <input type="text" asp-for="ContactNumberMain" class="form-control" id="inputContactNumberMain" aria-describedby="ContactNumberMainHelp" maxlength="50" placeholder="Telefone ou celular">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputContactNumberSecondary" class="form-label">Contato 2</label>
-                <input type="text" asp-for="ContactNumberSecondary" class="form-control" id="inputComments" aria-describedby="CommentsHelp">
+                <input type="text" asp-for="ContactNumberSecondary" class="form-control" id="inputContactNumberSecondary" aria-describedby="ContactNumberSecondaryHelp" maxlength="50" placeholder="Telefone ou celular">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputResponsible" class="form-label">Responsável</label>
-                <input type="text" asp-for="Responsible" class="form-control" id="inputResponsible" aria-describedby="ResponsibleHelp">
+                <input type="text" asp-for="Responsible" class="form-control" id="inputResponsible" aria-describedby="ResponsibleHelp" maxlength="100" placeholder="Responsável do estudante">
             </div>
         </div>
         <div class="col-md-6">
@@ -46,67 +46,67 @@
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputEmail" class="form-label">Email</label>
-                <input type="email" asp-for="Email" class="form-control" id="inputEmail" aria-describedby="EmailHelp">
+                <input type="email" asp-for="Email" class="form-control" id="inputEmail" aria-describedby="EmailHelp" maxlength="100" placeholder="fulano@email.com">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputCPF" class="form-label">CPF</label>
-                <input type="text" asp-for="CPF" class="form-control" id="inputCPF" aria-describedby="CPFHelp">
+                <input type="text" asp-for="CPF" class="form-control" id="inputCPF" aria-describedby="CPFHelp" maxlength="50" placeholder="115.789.266-98">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputRG" class="form-label">RG</label>
-                <input type="text" asp-for="RG" class="form-control" id="inputRG" aria-describedby="RGHelp">
+                <input type="text" asp-for="RG" class="form-control" id="inputRG" aria-describedby="RGHelp" maxlength="50" placeholder="123123172389">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressCEP" class="form-label">CEP</label>
-                <input type="text" asp-for="Address.CEP" class="form-control" id="inputAddressCEP" aria-describedby="AddressCEPHelp">
+                <input type="text" asp-for="Address.CEP" class="form-control" id="inputAddressCEP" aria-describedby="AddressCEPHelp" maxlength="50" placeholder="28.570-000">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressDistrict" class="form-label">Bairro</label>
-                <input type="text" asp-for="Address.District" class="form-control" id="inputAddressDistrict" aria-describedby="AddressDistrictHelp">
+                <input type="text" asp-for="Address.District" class="form-control" id="inputAddressDistrict" aria-describedby="AddressDistrictHelp" maxlength="100">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressCity" class="form-label">Cidade</label>
-                <input type="text" asp-for="Address.City" class="form-control" id="inputAddressCity" aria-describedby="AddressCityHelp">
+                <input type="text" asp-for="Address.City" class="form-control" id="inputAddressCity" aria-describedby="AddressCityHelp" maxlength="150">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressUF" class="form-label">UF</label>
-                <input type="text" asp-for="Address.UF" class="form-control" id="inputAddressUF" aria-describedby="AddressUFHelp">
+                <input type="text" asp-for="Address.UF" class="form-control" id="inputAddressUF" aria-describedby="AddressUFHelp" maxlength="2" placeholder="RJ">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressComplement" class="form-label">Complemento</label>
-                <input type="text" asp-for="Address.Complement" class="form-control" id="inputAddressComplement" aria-describedby="AddressComplementHelp">
+                <input type="text" asp-for="Address.Complement" class="form-control" id="inputAddressComplement" aria-describedby="AddressComplementHelp" maxlength="200">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressPublicPlace" class="form-label">Logradouro</label>
-                <input type="text" asp-for="Address.PublicPlace" class="form-control" id="inputAddressPublicPlace" aria-describedby="AddressPublicPlaceHelp">
+                <input type="text" asp-for="Address.PublicPlace" class="form-control" id="inputAddressPublicPlace" aria-describedby="AddressPublicPlaceHelp" maxlength="250">
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="inputAddressObservation" class="form-label">Observação Endereço</label>
-                <input type="text" asp-for="Address.Observation" class="form-control" id="inputAddressObservation" aria-describedby="AddressObservationHelp">
+                <input type="text" asp-for="Address.Observation" class="form-control" id="inputAddressObservation" aria-describedby="AddressObservationHelp" maxlength="200">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
                 <label for="inputComments" class="form-label">Observações Estudante</label>
-                <textarea type="text" rows="10" wrap="hard" asp-for="Comments" class="form-control" id="inputComments" aria-describedby="CommentsHelp"></textarea>
+                <textarea type="text" rows="10" wrap="hard" asp-for="Comments" class="form-control" id="inputComments" aria-describedby="CommentsHelp" maxlength="5000"></textarea>
             </div>
         </div>
     </div>
@@ -116,3 +116,17 @@
         </div>
     </div>
 </form>
+
+@section scripts{
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+        <script>
+    $(document).ready(function () {
+        var $cpf = $("#inputCPF");
+        $cpf.mask('000.000.000-00', {reverse: true});
+    });
+    $(document).ready(function () {
+        var $cep = $("#inputAddressCEP");
+        $cep.mask('00.000-000', {reverse: true});
+    });
+    </script>
+}
