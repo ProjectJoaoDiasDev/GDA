@@ -17,6 +17,7 @@ x64/
 .vs/
 **/node_modules
 **/wwwroot
+gda/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
