@@ -5,7 +5,7 @@
 }
 
 <p>
-    <a asp-action="New" type="button" class="btn bg-secondary text-white" id="#btn-new">Cadastrar Estudante</a>
+    <a asp-action="New" type="button" class="btn bg-primary text-white" id="#btn-new">Cadastrar Estudante</a>
 </p>
 <table id="studentTable" class="display table table-striped table-bordered border-secondary bg-secondary">
     <thead class="text-white" id="studentTableHead">
@@ -53,13 +53,31 @@
     @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" asp-append-version="true">*@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" asp-append-version="true">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" asp-append-version="true">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" asp-append-version="true">
 
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.colvis.min.js"></script>
 
 <script>
     $(document).ready( function () {
     $('#studentTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            'colvis'
+        ],
+        "info":true,
+        "processing": true,
+        "order": [[0, "asc"]],
+        "bDestroy": true,
         });
     });
 </script>
